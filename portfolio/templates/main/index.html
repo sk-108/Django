@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+{% include 'main/navbar.html'%}
+<div class="container">
+    <h1 class="center-align">Heading </h1>
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card blue-grey lighten-1">
+                <div class="card-content white-text">
+                    <img class="materialboxed responsive-img" src="{% static 'images/dp2.jpeg' %}">
+                    <span class="card-title">Sourav Kumar</span>
+                </div>
+                <div class="card-action">
+                    <a href="https://github.com/souravkumar31cse">Github</a>
+                    <a href="https://www.linkedin.com/in/sourav-k-268a551bb/">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">About Me</span>
+                    <p>Python mentor and developer at coding blocks  &#x1F60E; </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems);
+    });
+</script>
+{% endblock %}
+{% endblock %}

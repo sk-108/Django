@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hare Krishna !</title>
+        <link rel="stylesheet" type="text/css" media="screen" href= "{% static 'css/materialize.min.css' %}">
+        <script src="{% static 'js/materialize.min.js' %}"></script>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

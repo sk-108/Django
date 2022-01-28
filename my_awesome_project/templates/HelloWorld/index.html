@@ -1,0 +1,21 @@
+{% extends 'HelloWorld/base.html' %}
+{% block body %}
+        {% include 'HelloWorld/navbar.html' %}
+        <div class="container">
+            <h1>Hare krishna hare krishna krishna krishna hare hare hare ram hare ram ram ram hare hare !</h1>
+        <ul class="collection">
+            {% for mentor in  mentors %}
+                <li class="{% cycle 'bold' '' %} collection-item">{{mentor}}</li>
+            {% endfor %}
+        </ul>
+        <span>Developed By : {{ developers }}</span>
+        {% comment "optional more " %}
+            {{ developers }} wrote this !!
+        {% endcomment %}
+        </div>
+        
+{% endblock %}
+{% block head %}
+ <script>alert("hare krishna")</script>
+{% endblock %}
+ 
